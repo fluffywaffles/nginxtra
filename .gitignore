@@ -1,0 +1,10 @@
+# Persist build/bin
+/build/*
+!/build/bin
+/build/bin/*
+
+# Persist run/
+/run/*
+
+# Unhide .keep dummy files
+!/**/.keep
