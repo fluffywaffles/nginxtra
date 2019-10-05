@@ -18,7 +18,20 @@ Now every time you change your configuration file, nginx will receive a
 SIGHUP signal and reload the configuration.
 
 This isn't necessarily foolproof, so if it doesn't reload and you think it
-should, go ahead and open an issue for that there problem.
+should, go ahead and open an issue.
+
+## The Goal
+
+At the end, it's my hope that we'll have a collection of readable,
+complete examples of every directive in nginx, which will be faster to
+navigate and understand than the hyperlinked online docs. There will be a
+config file containing _every_ directive, and a config file containing as
+few as possible, and a lot of config files in-between.
+
+Maybe, these configuration files can serve as well-explained defaults for
+new installations of nginx. The explanations aren't just good for newbies,
+after all - they also work as reminders for those of us who can never
+quite remember exactly how the config works. :)
 
 ## The Smallest Config
 
@@ -45,3 +58,7 @@ default value(s). A reference sheet, if you will.
 
 The Largest nginx.conf is the goal of this project. Starting from the
 smallest, we'll slowly add until we've used every directive.
+
+As every directive is added, commentary in the config file will provide an
+annotated, hopefully somewhat flavorful and interesting, rundown of the
+official documentation for that directive.
