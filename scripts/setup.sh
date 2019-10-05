@@ -115,3 +115,5 @@ if [[ ! -x $watchexec_bin ]]; then
     exit 2
   fi
 fi
+
+printf '✓ all good, mon frere!\n'
