@@ -57,7 +57,7 @@ fi
 
 if [[ ! -x $watchexec_bin ]]; then
   eprintf '! `watchexec` not found!\n'
-  sys_watchexec_bin=$(which watchexec)
+  sys_watchexec_bin=$(which watchexec; :)
   if [[ -z $NO_SYSTEM_WATCHEXEC ]] && [[ -x $sys_watchexec_bin ]]; then
     eprintf '∙ linking system `watchexec` (%s)...\n' $sys_watchexec_bin
     ln -s $sys_watchexec_bin $watchexec_bin
