@@ -48,7 +48,7 @@ errors during `nginx` startup.
 - Why is the events context the *only* mandatory syntax?
 
 So far as I can tell, these questions aren't answered by the
-documentation. They also aren't very useful. Curious, though.
+documentation. They also aren't very useful questions. Curious, though.
 
 ## The Largest Config
 
