@@ -17,5 +17,8 @@ nginx_command=$(
     "'daemon off; pid ${git_root}/run/nginx.pid;'"
 )
 
+# after running ./scripts/setup.sh this is either a link or a download
+watchexec=${git_root}/build/bin/watchexec
+
 set -x # print commands when they are run
-watchexec -s SIGHUP --no-vcs-ignore -f '*.conf' "${nginx_command}"
+${watchexec} -s SIGHUP --no-vcs-ignore -f '*.conf' "${nginx_command}"
