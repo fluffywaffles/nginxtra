@@ -31,11 +31,16 @@ build_root=(    $git_root/build                  )
 build_bins=(    $build_root/bin                  )
 watchexec_bin=( $build_bins/watchexec            )
 
+watchexec_version=${WATCHEXEC_VERSION:-'1.10.2'}
 watchexec_url_default=$(
-  printf '%s'                                                  \
-    'https://github.com/watchexec/watchexec/releases/download' \
-    '/1.10.2/watchexec-1.10.2-x86_64-unknown-linux-gnu.tar.gz'
+  printf '%s%s%s%s%s'                                           \
+    'https://github.com/watchexec/watchexec/releases/download/' \
+    ${watchexec_version}                                        \
+    '/watchexec-'                                               \
+    ${watchexec_version}                                        \
+    '-x86_64-unknown-linux-gnu.tar.gz'                          \
 )
+
 watchexec_url=${WATCHEXEC_TAR_GZ_URL:-$watchexec_url_default}
 watchexec_tmp=$build_root/watchexec_tmp
 watchexec_tar=$watchexec_tmp/watchexec.tar.gz
